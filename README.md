@@ -1,4 +1,4 @@
-# Model Comparison — LLM Document Summarization + Tokenization Analysis (Internship Task)
+# LLMs Comparison — Document Summarization + Tokenization Analysis (Internship Task)
 
 ## Objective
 
