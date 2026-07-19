@@ -1,8 +1,8 @@
-# Model Comparison — LLM Document Summarization + Tokenization Analysis
+# Model Comparison — LLM Document Summarization + Tokenization Analysis (Internship Task)
 
 ## Objective
 
-This project compares five LLMs on a document summarization task using an identical input document and prompt, then goes further to examine how each model's tokenizer, architecture, and design choices affect the output — per the brief to think like a researcher rather than just complete a checklist.
+This internship task compares five LLMs on a document summarization task using an identical input document and prompt, then goes further to examine how each model's tokenizer, architecture, and design choices affect the output.
 
 ## Models Tested
 
@@ -14,7 +14,7 @@ This project compares five LLMs on a document summarization task using an identi
 
 ## Input Document
 
-`document/asteroid_comet_article.pdf` — "JPL Study Finds Near-Earth Asteroid Is Actually Comet," a NASA/JPL press article published July 16, 2026. Chosen deliberately as a niche, very recently published article, to avoid overlap with the AI/LLM glossary pages several classmates defaulted to, and because its density of exact names, dates, distances, and quotes makes hallucinations easy to catch.
+`document/asteroid_comet_article.pdf` — "JPL Study Finds Near-Earth Asteroid Is Actually Comet," a NASA/JPL press article published July 16, 2026. Chosen deliberately as a niche, very recently published article, and because its density of exact names, dates, distances, and quotes makes hallucinations easy to catch.
 
 ## Prompt
 
@@ -36,7 +36,7 @@ paragraph.
 
 ## Fact-Check Method
 
-Rather than assigning scores from impression, each summary was checked sentence-by-sentence against the source article for: (1) factual claims not present in the source, (2) numeric/date/name errors, and (3) omission of load-bearing facts (named researchers, telescopes, publication venue). Word/character counts were computed programmatically, not estimated.
+Rather than assigning scores from impression, each summary was checked sentence-by-sentence against the source article for: (1) factual claims not present in the source, (2) numeric/date/name errors, and (3) omission of load-bearing facts (named researchers, telescopes, publication venue). Word/character counts were computed.
 
 ## Comparison Table
 
