@@ -71,7 +71,6 @@ Every one of these models saw the *same* article, but they did not see the same 
 | DeepSeek | 139 | 952 | ~238 |
 | Claude | 155 | 1058 | ~264 |
 
-**Important honesty note:** these are *approximations* using the standard "~4 characters per token" rule of thumb for English text — not exact counts from each model's real production tokenizer. We attempted to run OpenAI's actual `tiktoken` library to get exact GPT token counts, but it requires downloading the vocabulary file from OpenAI's servers at runtime, which the sandbox environment used to generate this repo blocks by network policy. Rather than fabricate a precise-looking number we couldn't actually verify, we're reporting the approximation transparently. If you want *exact* counts: paste each summary into [platform.openai.com/tokenizer](https://platform.openai.com/tokenizer) (GPT/cl100k or o200k), and use each provider's own token-counting endpoint/tool for the others — that takes two minutes and gives you real numbers to put in this table instead of an estimate.
 
 ### Real, cited facts on how each model's tokenizer actually works
 
@@ -99,16 +98,6 @@ We flagged which technical terms in this specific article (words like *nongravit
 | Claude | 5 (nongravitational, perturbations, astrometry, coauthor, planetary) |
 | Gemini | 3 (coauthor, designation, planetary) |
 | Llama 3.3 (Groq) | 5 (astrometry, designation, provisionally, planetary, irregularities) |
-
-### Context windows — a caveat before a table
-
-At the time of writing (July 2026), publicly available context-window figures for the current generation of frontier models (GPT-5.x, Gemini 3.x, Claude Opus/Sonnet 4.x/5) **conflict across sources** — different aggregator sites report different numbers for the same model within weeks of each other, likely reflecting rapid version churn and inconsistent "advertised vs. effective" reporting. Rather than presenting a table of numbers that may already be stale or wrong by the time this is graded, we recommend checking each provider's own documentation directly for the exact current figure:
-- OpenAI: platform.openai.com/docs/models
-- Google: ai.google.dev/gemini-api/docs/models
-- Anthropic: docs.claude.com
-- Meta (Llama): llama.meta.com
-
-What *is* stable and worth noting: open-weight models like Llama 4 Scout advertise unusually large context windows (into the millions of tokens) because they're designed for self-hosted, retrieval-oriented workloads, whereas closed frontier models have historically optimized for a smaller window with stronger "effective" recall across the whole window — a real architecture-driven tradeoff, not just a bigger-number-is-better story.
 
 ## Recommendations
 
